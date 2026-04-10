@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu, X, Zap, ChevronRight } from 'lucide-react';
+import ThemeToggle from './ThemeToggle';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -59,6 +60,7 @@ export default function Navbar() {
           </div>
 
           <div className="hidden md:flex items-center gap-6">
+            <ThemeToggle />
             <Link 
               href="/auth/login" 
               className="text-sm font-bold text-zinc-500 hover:text-white transition-colors tracking-widest uppercase"
@@ -109,6 +111,9 @@ export default function Navbar() {
               </a>
             ))}
             <div className="pt-6 grid grid-cols-1 gap-4">
+              <div className="flex justify-center">
+                <ThemeToggle />
+              </div>
               <Link 
                 href="/auth/login" 
                 className="px-6 py-4 bg-white/5 text-white rounded-2xl font-bold text-sm hover:bg-white/10 transition-all text-center"

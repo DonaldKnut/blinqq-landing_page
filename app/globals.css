@@ -10,6 +10,16 @@
   --accent-emerald: 52, 211, 153;
 }
 
+html.dark {
+  --foreground-rgb: 255, 255, 255;
+  --background-rgb: 3, 7, 18;
+}
+
+html.light {
+  --foreground-rgb: 15, 23, 42;
+  --background-rgb: 248, 250, 252;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -149,4 +159,31 @@ h1, h2, h3, h4, h5, h6 {
 
 .hover-glow:hover::after {
   opacity: 1;
+}
+
+/* Light theme compatibility overrides for existing dark-first classes */
+html.light .bg-midnight {
+  background-color: rgb(var(--background-rgb)) !important;
+}
+
+html.light .text-white {
+  color: #0f172a !important;
+}
+
+html.light .glass-card {
+  background: rgba(15, 23, 42, 0.04);
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  box-shadow: 0 8px 32px 0 rgba(15, 23, 42, 0.1);
+}
+
+html.light .border-white\/5 {
+  border-color: rgba(15, 23, 42, 0.1) !important;
+}
+
+html.light .border-white\/10 {
+  border-color: rgba(15, 23, 42, 0.14) !important;
+}
+
+html.light .bg-white\/5 {
+  background-color: rgba(15, 23, 42, 0.06) !important;
 }
