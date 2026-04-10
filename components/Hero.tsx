@@ -103,7 +103,7 @@ export default function Hero() {
 
           {/* Right Column - Visual */}
           <div className={`lg:col-span-5 relative transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
-            <div className="relative mx-auto max-w-[320px]">
+            <div className="phone-preview relative mx-auto max-w-[320px]">
               {/* Massive Glow Background */}
               <div className="absolute inset-0 bg-emerald-500/20 rounded-[3rem] blur-[80px] animate-pulse-glow"></div>
               

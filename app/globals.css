@@ -187,3 +187,52 @@ html.light .border-white\/10 {
 html.light .bg-white\/5 {
   background-color: rgba(15, 23, 42, 0.06) !important;
 }
+
+@media (max-width: 767px) {
+  html.light .mobile-nav-shell {
+    background: rgba(248, 250, 252, 0.75) !important;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(15, 23, 42, 0.1);
+  }
+}
+
+html.light .logo-shell {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(15, 23, 42, 0.2) !important;
+}
+
+html.light .mobile-menu-trigger {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(15, 23, 42, 0.2) !important;
+  color: #0f172a !important;
+}
+
+html.light .mobile-menu-panel {
+  background: rgba(255, 255, 255, 0.96) !important;
+  border-color: rgba(15, 23, 42, 0.15) !important;
+}
+
+/* Keep phone mockup text readable on dark phone surface in light mode */
+html.light .phone-preview .text-white {
+  color: #f8fafc !important;
+}
+
+html.light .phone-preview .text-zinc-500 {
+  color: #cbd5e1 !important;
+}
+
+html.light .phone-preview .text-zinc-400 {
+  color: #e2e8f0 !important;
+}
+
+/* Make stat icons clearer in light mode */
+html.light .stats-icon-shell {
+  background: #ffffff !important;
+  border-color: rgba(15, 23, 42, 0.18) !important;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.12);
+}
+
+html.light .stats-icon-glyph {
+  color: #0f172a !important;
+}

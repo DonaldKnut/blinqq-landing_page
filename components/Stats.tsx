@@ -91,8 +91,8 @@ export default function Stats() {
               <div className="absolute inset-0 rounded-[2.5rem] border border-white/5 group-hover:border-emerald-500/30 transition-colors duration-500"></div>
 
               {/* Icon Container */}
-              <div className={`relative inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-zinc-900 border border-white/5 mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 group-hover:shadow-[0_0_30px_rgba(255,255,255,0.05)]`}>
-                <stat.icon className={`w-8 h-8 bg-gradient-to-br ${stat.color} bg-clip-text text-white`} />
+              <div className={`stats-icon-shell relative inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-zinc-900 border border-white/5 mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 group-hover:shadow-[0_0_30px_rgba(255,255,255,0.05)]`}>
+                <stat.icon className={`stats-icon-glyph w-8 h-8 bg-gradient-to-br ${stat.color} bg-clip-text text-white`} />
               </div>
 
               {/* Data Content */}

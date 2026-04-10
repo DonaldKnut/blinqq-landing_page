@@ -18,7 +18,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+    <nav className={`mobile-nav-shell fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       scrolled 
         ? 'py-4 bg-zinc-950/80 backdrop-blur-xl border-b border-white/5 shadow-2xl' 
         : 'py-6 bg-transparent'
@@ -30,7 +30,7 @@ export default function Navbar() {
             <div className="relative group flex items-center gap-3">
               <div className="relative">
                 <div className="absolute inset-0 bg-brand-500/30 rounded-xl blur-md group-hover:bg-brand-500/50 transition-all duration-500"></div>
-                <div className="relative w-10 h-10 bg-zinc-900 border border-white/10 rounded-xl flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-xl">
+                <div className="logo-shell relative w-10 h-10 bg-zinc-900 border border-white/10 rounded-xl flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-xl">
                   <Zap className="w-5 h-5 text-brand-400 fill-brand-400/10" />
                 </div>
               </div>
@@ -77,7 +77,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-white hover:bg-white/10 transition-colors"
+            className="mobile-menu-trigger md:hidden w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-white hover:bg-white/10 transition-colors"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -93,7 +93,7 @@ export default function Navbar() {
         <div className={`md:hidden absolute top-full left-0 right-0 mt-2 mx-4 overflow-hidden transition-all duration-500 ease-in-out ${
           isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'
         }`}>
-          <div className="bg-midnight/95 backdrop-blur-2xl border border-white/10 rounded-2xl p-4 shadow-2xl space-y-2">
+          <div className="mobile-menu-panel bg-midnight/95 backdrop-blur-2xl border border-white/10 rounded-2xl p-4 shadow-2xl space-y-2">
             {[
               { name: 'Home', href: '#home' },
               { name: 'Core Features', href: '#features' },
